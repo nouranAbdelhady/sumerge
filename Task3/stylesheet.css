@@ -1,0 +1,21 @@
+img {
+  	position: absolute;
+  	max-height: 10%;
+  	max-width: 10%;
+  	background: transparent;
+  	border-radius: 100px;  
+  	cursor:hand;
+}
+div {
+	position:absolute;
+	width:600px; 
+	height:600px
+}
+#rightSide {
+	left: 50%; 
+	border-left: 3px solid black; 
+}
+
+body {
+	background-color: lightgrey;
+}
