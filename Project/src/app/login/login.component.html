@@ -1,0 +1,59 @@
+<body>
+<div class="container">
+
+  <div class="split left">
+    <div class="centered">
+     <img src="https://images.squarespace-cdn.com/content/v1/5734a4f99f7266fafb5d3e14/1583780743093-TPPD7KKTSOK7AIOSHWBV/source-3.gif" height="600" style="max-width: auto" alt="Movie image">
+    </div>
+  </div>
+   
+  <div class="split right">
+    <div class="centered">
+        <div class="login-box">
+          <h1>Login</h1>
+          <div class="box-content">
+            <form [formGroup]="form" (ngSubmit)="Login()">
+
+              <div class="form-group">
+                <label>Email</label>
+                <input
+                  type="text"
+                  [(ngModel)]="emailValue"
+                  formControlName="email"
+                  class="form-control"
+                  [ngClass]="{ 'is-invalid': submitted && f.email.errors }"
+                />
+                <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                  <div *ngIf="f.email.errors.required">Email is required</div>
+                  <div *ngIf="f.email.errors.email">Email is invalid</div>
+                </div>
+              </div>
+          
+              <div class="form-group">
+                <label>Password</label>
+                <input
+                  type="password"
+                  formControlName="password"
+                  class="form-control"
+                  [ngClass]="{ 'is-invalid': submitted && f.password.errors }"
+                />
+                <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                  <div *ngIf="f.password.errors.required">Password is required</div>
+                </div>
+              </div>
+              <br>
+          
+              <div class="form-group">
+                <button type="submit" class="btn btn-primary">Login</button>
+              </div>
+            </form>
+
+          </div>
+
+        </div>
+        </div>
+        
+  </div>
+  
+</div>
+</body>

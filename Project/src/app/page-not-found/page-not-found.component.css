@@ -1,0 +1,11 @@
+.center {
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 50px;
+    color: white;
+  }
+
+body {
+  padding-top: 60px;
+  background: linear-gradient(to left,#000000, #d11414);
+}
