@@ -1,0 +1,39 @@
+<body>
+    <!-- <p class="intro">Top Movies 2021<p> -->
+        <h1>TOP MOVIES 2021</h1>
+        <div class="container">
+            <li class="movie-card" *ngFor="let film of films">
+
+                    <div class="movie-header">
+                        <div class="header-icon-container">
+                            <a (click)="moreDetails(film)">
+                                <img 
+                                [src]="'http://image.tmdb.org/t/p/w500/' + film.poster_path" 
+                                alt="{{ film.title }}">   <!--image path-->
+                            </a>
+                        </div>
+                    </div> <!--movie-header-->
+
+                    <div class="movie-content">
+                        <div class="movie-content-header">
+                            <a (click)="moreDetails(film)"> <!--Should link to film page-->
+                                <h3 class="movie-title">{{ film.title }}</h3>
+                            </a>
+                        </div>
+
+                        <div class="movie-info"> <!-- will chang eto release date -->
+                            <div class="info-section">
+                                <label>Release Date</label>
+                                <span>{{ film.release_date }}</span>
+                            </div> <!--date,time-->
+                            <div class="info-section"> <!-- will chang to vote count -->
+                                <label>Vote Count</label>
+                                <span>{{ film.vote_count }}</span>
+                            </div> <!--screen-->
+                        </div>
+
+                    </div><!--movie-content-->
+
+            </li>
+        </div> <!--container-->
+</body>
