@@ -13,8 +13,8 @@ import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { FilmComponent } from './home/film/film.component';
 import { HttpClientModule } from '@angular/common/http';
-import { AuthService } from './extra/auth-service';
-import { AuthGuard } from './extra/auth-guard-service';
+import { AuthService } from './services/auth-service';
+import { AuthGuard } from './services/auth-guard-service';
 import { FilmDetailsComponent } from './home/film/film-details/film-details.component';
 
 @NgModule({
